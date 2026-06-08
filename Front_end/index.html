@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="en">
+    <title>Welcome!</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+    <script type="py" src="./main.py"></script>
+</head>
+<body>
+    <div id="login" class="app-view ">
+        <h2 id="wel">Welcome</h2>
+        <h3 id="log">Login to get started</h3>
+
+        <div class="input-group">
+            <label for="log-usr">Username</label>
+            <input type="text" id="log-usr">
+        </div>
+
+        <div class="input-group">
+            <label for="log-pas">Password</label>
+            <input type="password" id="log-pas">
+        </div>
+
+        <button id="login">Login</button>
+
+        <div>
+            dont have an account?
+            <button id="go-to-register" py-click="print_bullshit">Register</button>
+        </div>
+    </div>
+
+    <div id="register" class="app-view active">
+
+        <h1 style="padding-bottom: 50px;">Create a new account</h1>
+
+        <div class="input-group">
+            <label for="reg-usr">Enter your username</label>
+            <input type="text" id="reg-usr">
+        </div>
+        
+        <div class="input-group">
+            <label for="reg-pas">Enter your password</label>
+            <input type="text" id="reg-pas">
+        </div>
+
+        <div class="input-group">
+            <label for="repas">Retype your password</label>
+            <input type="text" id="repas">
+        </div>
+    </div>
+</body>

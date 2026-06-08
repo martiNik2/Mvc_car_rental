@@ -29,3 +29,11 @@ public class LoginRequest
     public required string Password{get;set;}
 }
 
+public class RegisterRequest
+{
+    public required string Username{get;set;}
+    public required string Password{get;set;}
+    public required string LicenceNumber{get;set;}
+    public required string SSN{get;set;}
+}
+

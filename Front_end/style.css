@@ -1,0 +1,46 @@
+body{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.app-view{
+    display: none;
+}
+
+.app-view.active {
+    display: flex !important;
+    flex-direction: column;   /* Force elements to stack vertically */
+    align-items: center;       /* Center everything horizontally */
+    justify-content: center;
+    gap: 15px;                 /* Clean spacing between rows */
+    margin-top: 10px;
+    }
+
+h1{
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+*{
+    margin:10px;
+}
+
+.input{
+    margin: 10px;
+}
+
+#go-to-register{
+    color: black;
+    background-color: inherit;
+    border: none;
+    text-decoration: underline;
+    margin: 5px;
+}
+
+#go-to-register:hover{
+    color: blue;
+    cursor: pointer;
+}
+
+
+

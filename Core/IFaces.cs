@@ -16,4 +16,5 @@ public interface IVehicleRepository
 public interface IAuthService
 {
     Task<bool> AuthUserAsync(string Username,string Password);
+    string GetPasswordHash(string password);
 }

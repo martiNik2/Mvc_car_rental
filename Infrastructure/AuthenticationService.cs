@@ -15,14 +15,12 @@ public class AuthenticationService : IAuthService
     }
     public async Task<bool> AuthUserAsync(string Username,string Password)
     {
-        var bytes=Encoding.UTF8.GetBytes(Password);
-        var sha_bytes=SHA256.HashData(bytes);
-        string PasswordHash=Encoding.UTF8.GetString(sha_bytes);
+        var passwordHash=GetPasswordHash(Password);
 
         var result=await _context.Users
         .FirstOrDefaultAsync(u=>
         u.UserName==Username && 
-        u.PasswordHash==PasswordHash);
+        u.PasswordHash==passwordHash);
 
         if (result == null)
         {
@@ -32,5 +30,12 @@ public class AuthenticationService : IAuthService
         {
             return true;
         }
+    }
+
+    public string GetPasswordHash(string password)
+    {
+        var bytes=Encoding.UTF8.GetBytes(password);
+        var sha_bytes=SHA256.HashData(bytes);
+        return Convert.ToBase64String(sha_bytes);
     }
 }

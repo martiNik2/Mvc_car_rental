@@ -30,9 +30,19 @@ public class AuthController : ControllerBase
         }
     }
     [HttpPost("register")]
-    public async Task<IActionResult> Register([FromBody] User user)
+    public async Task<IActionResult> Register([FromBody] RegisterRequest registerRequest)
     {
+        var passwordhash=_authService.GetPasswordHash(registerRequest.Password);
+        var user = new User{
+            UserName=registerRequest.Username,
+            PasswordHash=passwordhash,
+            LicenceNumber=registerRequest.LicenceNumber,
+            SSN=registerRequest.SSN
+        };
+
         var result=await _userRepository.AddUserAsync(user);
+
+
         if (result == true)
         {
             return Ok("success");
