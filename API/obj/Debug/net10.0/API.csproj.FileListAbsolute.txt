@@ -164,3 +164,15 @@
 /home/kamikazen/coding_projects/cs_car_rent/API/obj/Debug/net10.0/API.genruntimeconfig.cache
 /home/kamikazen/coding_projects/cs_car_rent/API/obj/Debug/net10.0/ref/API.dll
 /home/kamikazen/coding_projects/cs_car_rent/API/obj/Debug/net10.0/API.sourcelink.json
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.csproj.AssemblyReference.cache
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/rpswa.dswa.cache.json
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.GeneratedMSBuildEditorConfig.editorconfig
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.AssemblyInfoInputs.cache
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.AssemblyInfo.cs
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.csproj.CoreCompileInputs.cache
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.MvcApplicationPartsAssemblyInfo.cs
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.MvcApplicationPartsAssemblyInfo.cache
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.sourcelink.json
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.dll
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/refint/API.dll
+/home/anas88893142/Mvc_car_rental/API/obj/Debug/net10.0/API.pdb

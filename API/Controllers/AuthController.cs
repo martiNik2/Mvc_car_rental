@@ -37,7 +37,7 @@ public class AuthController : ControllerBase
             UserName=registerRequest.Username,
             PasswordHash=passwordhash,
             LicenceNumber=registerRequest.LicenceNumber,
-            SSN=registerRequest.SSN
+            Ssn=registerRequest.Ssn
         };
 
         var result=await _userRepository.AddUserAsync(user);
