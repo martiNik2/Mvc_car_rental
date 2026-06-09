@@ -13,7 +13,7 @@ public class User:BaseEntity
     public string UserName{get;set;}=string.Empty;
     public string PasswordHash{get;set;}=string.Empty;
     public string LicenceNumber{get;set;}=string.Empty;
-    public required string SSN{get;set;}
+    public required string Ssn{get;set;}
 }
 
 public class Vehicle : BaseEntity
@@ -34,6 +34,6 @@ public class RegisterRequest
     public required string Username{get;set;}
     public required string Password{get;set;}
     public required string LicenceNumber{get;set;}
-    public required string SSN{get;set;}
+    public required string Ssn{get;set;}
 }
 

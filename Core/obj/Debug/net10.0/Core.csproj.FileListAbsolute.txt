@@ -9,3 +9,4 @@
 /home/kamikazen/coding_projects/cs_car_rent/Core/obj/Debug/net10.0/refint/Core.dll
 /home/kamikazen/coding_projects/cs_car_rent/Core/obj/Debug/net10.0/Core.pdb
 /home/kamikazen/coding_projects/cs_car_rent/Core/obj/Debug/net10.0/ref/Core.dll
+/home/kamikazen/coding_projects/cs_car_rent/Core/obj/Debug/net10.0/Core.sourcelink.json
