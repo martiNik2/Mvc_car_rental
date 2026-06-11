@@ -1,4 +1,4 @@
-FROM python:3.12-trixie
+FROM python:3.12-slim
 
 WORKDIR /Front_end
 
@@ -6,7 +6,6 @@ WORKDIR /Front_end
 COPY requirements.txt .
 
 RUN pip install --no-cache-dir -r requirements.txt
-
 
 COPY . .
 
