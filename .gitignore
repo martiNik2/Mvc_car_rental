@@ -15,3 +15,5 @@ obj/
 *.userosscache
 *.sln.docstates
 .vscode/
+.dll
+.pdb
