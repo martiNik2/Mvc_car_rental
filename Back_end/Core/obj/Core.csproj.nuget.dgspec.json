@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/anas88893142/Mvc_car_rental/Core/Core.csproj": {}
+    "/home/kamikazen/coding_projects/cs_car_rent/Back_end/Core/Core.csproj": {}
   },
   "projects": {
-    "/home/anas88893142/Mvc_car_rental/Core/Core.csproj": {
+    "/home/kamikazen/coding_projects/cs_car_rent/Back_end/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/anas88893142/Mvc_car_rental/Core/Core.csproj",
+        "projectUniqueName": "/home/kamikazen/coding_projects/cs_car_rent/Back_end/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "/home/anas88893142/Mvc_car_rental/Core/Core.csproj",
-        "packagesPath": "/home/anas88893142/.nuget/packages/",
-        "outputPath": "/home/anas88893142/Mvc_car_rental/Core/obj/",
+        "projectPath": "/home/kamikazen/coding_projects/cs_car_rent/Back_end/Core/Core.csproj",
+        "packagesPath": "/home/kamikazen/.nuget/packages/",
+        "outputPath": "/home/kamikazen/coding_projects/cs_car_rent/Back_end/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/anas88893142/.nuget/NuGet/NuGet.Config"
+          "/home/kamikazen/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net10.0"

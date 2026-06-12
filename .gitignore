@@ -3,3 +3,15 @@ env/
 __pycache__/
 *.pyc
 .env
+bin/
+obj/
+*.swp
+*~
+*.log
+*.crash
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vscode/
