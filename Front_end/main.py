@@ -1,13 +1,17 @@
-from pyscript import when, web
-from pyodide.http import pyfetch
+from pyscript import when, web, fetch, document
 import models
 
-BACKEND_URL="http://127.0.0.1:placeholder" #FIX THIS SHIT
+BACKEND_URL="http://127.0.0.1:5088/api/auth" 
+
+
 
 def show_register(event):
     web.page["login"].classes.remove("active")
     web.page["register"].classes.add("active")
     
+def show_login(event):
+    web.page["register"].classes.remove("active")
+    web.page["login"].classes.add("active")
     
 async def send_reg(event):
     
@@ -23,45 +27,48 @@ async def send_reg(event):
         Ssn=str(res[4].value)
     )
     
+    if not register.Username or not register.Password or not register.Ssn:
+        print("error")
+        return
     
+    response=None
     try:
-        response = await pyfetch(
-            url=BACKEND_URL,
+        response = await fetch(
+            url=f"{BACKEND_URL}/register",
             method="POST",
             headers={"Content-type" : "application/json"},
-            payload=register.json()
+            body=register.model_dump_json()
         )
-        print(response)
-    except:
         if response.ok:
-            print("all good")
-        else:
-            print("WE GOT A PROBLEM")
+            print("OK!!")
+            
+            
+    except:
+        print("WE GOT A FUCKING PROBLEM")
 
 
-    print(register)
 
 async def send_log(event):
     res=web.page.find("div.active div.input-group input")
 
-    Username=res[0].value
-    Password=res[1].value
+    Username=str(res[0].value)
+    Password=str(res[1].value)
     
+    if not Username or not Password:
+        print("error")
+        return
 
     login_request=models.LoginRequest(Username=Username,Password=Password)
 
+    response=None
     try:
-        response = await pyfetch(
-            url=BACKEND_URL,
+        response = await fetch(
+            url=f"{BACKEND_URL}/login",
             method="POST",
             headers={"Content-type":"application/json"},
-            payload=login_request.json()
+            body=login_request.model_dump_json()
         )
+    except Exception as e:
+        print(e)
 
-        print(response)
-    except:
-        if response.ok:
-            print("all good")
-        else:
-            print("problem?")
 

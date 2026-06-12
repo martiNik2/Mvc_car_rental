@@ -20,13 +20,20 @@ public class SqlUserRepository:IUserRepository
     }
     public async Task<bool> AddUserAsync(User user)
     {
-        try{
+        try
+        {
             await _context.Users.AddAsync(user);
             await _context.SaveChangesAsync();
             return true;
         }
-        catch
+        catch(Exception ex)
         {
+            System.Console.WriteLine($"Exception has occured: {ex.Message}");
+
+            if (ex.InnerException != null)
+            {
+                System.Console.WriteLine($"inner exception: {ex.InnerException.Message}");
+            }
             return false;
         }
     }

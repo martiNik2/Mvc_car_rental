@@ -12,7 +12,7 @@ public class User:BaseEntity
 {
     public string UserName{get;set;}=string.Empty;
     public string PasswordHash{get;set;}=string.Empty;
-    public string LicenceNumber{get;set;}=string.Empty;
+    public string LicenseNumber{get;set;}=string.Empty;
     public required string Ssn{get;set;}
 }
 
@@ -33,7 +33,7 @@ public class RegisterRequest
 {
     public required string Username{get;set;}
     public required string Password{get;set;}
-    public required string LicenceNumber{get;set;}
+    public required string LicenseNumber{get;set;}
     public required string Ssn{get;set;}
 }
 

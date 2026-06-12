@@ -26,14 +26,13 @@
             <input type="password" id="log-pas">
         </div>
 
-        <button id="login">Login</button>
+        <button id="login" py-click="send_log">Login</button>
 
         <div>
             dont have an account?
             <button id="go-to-register" py-click="show_register">Register</button>
         </div>
     </div>
-
     <div id="register" class="app-view ">
 
         <h1 style="padding-bottom: 50px;">Create a new account</h1>
@@ -64,5 +63,9 @@
         </div>
 
         <button id="send-reg" py-click="send_reg">Register</button>
+        <button id="to-login" py-click="show_login">To login</button>
+    </div>
+    <div id="home" class="app-view">
+        <script type="py" src="home.py"></script> 
     </div>
 </body>

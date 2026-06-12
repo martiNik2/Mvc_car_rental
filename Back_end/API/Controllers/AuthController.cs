@@ -36,7 +36,7 @@ public class AuthController : ControllerBase
         var user = new User{
             UserName=registerRequest.Username,
             PasswordHash=passwordhash,
-            LicenceNumber=registerRequest.LicenceNumber,
+            LicenseNumber=registerRequest.LicenseNumber,
             Ssn=registerRequest.Ssn
         };
 
