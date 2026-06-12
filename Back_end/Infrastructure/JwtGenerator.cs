@@ -12,7 +12,7 @@ public static class JwtGenerator
 {
     private static string? Key=Environment.GetEnvironmentVariable("JWT_KEY");
 
-    public static string GenerateToken(User user)
+    public async static Task<string> GenerateTokenAsync(string Username)
     {
         if (Key == null)
         {
@@ -25,8 +25,7 @@ public static class JwtGenerator
 
         var claims=new Dictionary<string, object>
         {
-            {JwtRegisteredClaimNames.NameId,user.Id.ToString()},
-            {JwtRegisteredClaimNames.Name,user.UserName}  
+            {JwtRegisteredClaimNames.Name,Username}  
         };
 
         var tokenDescriptor=new SecurityTokenDescriptor

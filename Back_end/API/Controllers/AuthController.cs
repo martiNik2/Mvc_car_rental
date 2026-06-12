@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
+
+using System.Security.Principal;
 using Core;
+using Infrastructure;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -22,7 +25,8 @@ public class AuthController : ControllerBase
         bool result= await _authService.AuthUserAsync(loginRequest.Username,loginRequest.Password);
         if (result)
         {
-            return Ok();
+            var token=await JwtGenerator.GenerateTokenAsync(loginRequest.Username);
+            return Ok(new {token=token});
         }
         else
         {

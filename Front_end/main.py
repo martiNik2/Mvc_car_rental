@@ -1,5 +1,5 @@
-from pyscript import when, web, fetch, document
-import models
+from pyscript import when, web, fetch, window
+import models,home
 
 BACKEND_URL="http://127.0.0.1:5088/api/auth" 
 
@@ -68,7 +68,14 @@ async def send_log(event):
             headers={"Content-type":"application/json"},
             body=login_request.model_dump_json()
         )
+        response=await response.json()
+        token=response['token']
+        window.localStorage.setItem("user_token",token)
+        home.load_home()
     except Exception as e:
-        print(e)
+        print(f"exception:{e}")
+        
+        
+
 
 
